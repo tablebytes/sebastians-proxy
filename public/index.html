@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Open Tabs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <style type = "text/css"> 
+    @font-face {
+      font-family: "Brandon";
+      src: url("Fonts/BText-Regular.otf");
+    }
+  </style>
+  <style type = "text/css"> 
+    @font-face {
+      font-family: "Brandon-Bold";
+      src: url("Fonts/BText-Bold.otf");
+    }
+  </style>
+  <style type = "text/css">    
+    @font-face {
+      font-family: "Brandon-Light";
+      src: url("Fonts/BText-Light.otf");
+    }
+  </style>
+  <style type = "text/css">
+    @font-face {
+      font-family: "Brandon-Black";
+      src: url("Fonts/BText-Black.otf");
+    }
+  </style>
+  <style type = "text/css"> 
+    @font-face {
+      font-family: "Brandon-Medium";
+      src: url("Fonts/BText-Medium.otf");
+    }
+  </style>
+</head>
+<body>
+  <div id="overview" width="640px"></div>
+  <div id="menu" width="640px" style='float: left'></div>
+  <div id="sidebar" style='right: 0; top: 0; position: absolute'></div>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="http://localhost:3004/bundle.js"></script>
+  <script src="http://localhost:3005/bundle.js"></script>
+  <script>
+      ReactDOM.render(
+        React.createElement(Menu),
+        document.getElementById('menu')
+      );
+      ReactDOM.render(
+        React.createElement(Sidebar),
+        document.getElementById('sidebar')
+      );
+      ReactDOM.render(
+        React.createElement(Overview),
+        document.getElementById('overview')
+      );
+  </script>
+</body>
+</html>
