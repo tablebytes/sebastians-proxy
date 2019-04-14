@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Brandon";
+  src: 
+    url("fonts/BText-Regular.otf");
+}
+@font-face {
+  font-family: "Brandon-Medium";
+  src:
+    url("fonts/BText-Medium.otf");
+}
+@font-face {
+  font-family: "Brandon-Bold";
+  src:
+    url("fonts/BText-Bold.otf");
+}
+@font-face {
+  font-family: "Brandon-Light";
+  src:
+    url("fonts/BText-Light.otf");
+}
+.proxy-container {
+  display: grid;
+  grid-template-columns: 640px 320px;
+  grid-template-rows: 0px auto auto minmax(700px, auto) auto;
+  flex-direction: row-reverse;
+  max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column-gap: 40px;
+}
+.proxy-sidebar {
+  padding-top: 10px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 6;
+}
+.proxy-overview {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+.proxy-photos {
+  grid-column: 1;
+  grid-row: 3 / 4;
+}
+.proxy-menu {
+  grid-column: 1;
+  grid-row: 4 / 5;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.proxy-reviews {
+  grid-column: 1;
+  grid-row: 5;
+}
+.main-image {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: -50px;
+}
