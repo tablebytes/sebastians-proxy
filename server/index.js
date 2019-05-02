@@ -5,6 +5,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 const axios = require('axios');
 
+require('newrelic');
+
 const axios3001 = axios.create({
   baseURL: 'http://54.161.138.158',
 });
@@ -15,9 +17,9 @@ const axios3003 = axios.create({
   baseURL: 'http://35.165.224.178',
 });
 const axios3004 = axios.create({
-  baseURL: 'http://34.219.173.69',
+  baseURL: 'http://localhost:3004',
 });
-
+//http://34.219.173.69
 app.get('/api/restaurants/:id/menus', (req, res) => {
   axios3004.get(`/api/restaurants/${req.params.id}/menus`)
     .then(response => res.send(response.data))
